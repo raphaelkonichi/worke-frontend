@@ -3,8 +3,9 @@
     <div class="intro-infos">
       <h1>o app para movimentar seu corpo</h1>
       <label>
-        Exercite seu corpo, tenha uma rotina mais saudável para sua saúde e se
-        junte com seus amigos para fazer dessa jornada algo divertido.
+        Exercite seu corpo, estabeleça uma rotina e 
+        junte-se com seus amigos para competir de forma 
+        saudável e inovadora. Movimente-se com worke!
       </label>
       <div class="intro-infos_store">
         <h2>Disponível em</h2>
@@ -52,13 +53,26 @@ export default {};
     }
 
     &_store {
+      border: 2px solid @blue;
+      padding: 20px;
+      border-radius: 25px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: 30px;
+
+      h2 {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: @blue;
+      }
 
       .store-img {
         img {
           margin-left: 15px;
+          width: 40px;
         }
       }
     }
