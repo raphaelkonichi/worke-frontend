@@ -1,19 +1,23 @@
 <template>
   <div class="about">
-    <h1>saiba mais sobre o app</h1>
+    <h1>{{ moreAboutSectionTitle }}</h1>
     <div class="about-group">
-        <h2>entre em um grupo</h2>
+        <h2>{{ moreAboutTitle }}</h2>
         <div class="about-group_img">
             <img src="../../assets/img/mobileLanding2.png" />
         </div>
-        <label>Entre em um grupo com seus amigos e compartilhe seu progresso.</label>
+        <label>{{ moreAboutText }}</label>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: {
+    moreAboutSectionTitle: String,
+    moreAboutTitle: String,
+    moreAboutText: String,
+  }
 }
 </script>
 
@@ -33,23 +37,28 @@ export default {
 
     &-group {
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas: "title text";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 70px;
+        grid-template-areas: "title phone text";
         align-items: center;
+        background-image: url("../../assets/img/backgroundPurple.png");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        margin-bottom: 100px;
 
         h2 {
             grid-area: title;
-            position: absolute;
             padding-left: @margin-desktop;
             text-transform: uppercase;
+            letter-spacing: 0.1em;
             font-weight: 900;
             font-size: 28px;
             color: @purple;
         }
 
         &_img {
-            grid-area: title;
-            position: relative;
+            grid-area: phone;
 
             img {
                 width: 96%;

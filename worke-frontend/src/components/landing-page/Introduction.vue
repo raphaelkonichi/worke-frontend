@@ -1,12 +1,8 @@
 <template>
   <div class="intro">
     <div class="intro-infos">
-      <h1>o app para movimentar seu corpo</h1>
-      <label>
-        Exercite seu corpo, estabeleça uma rotina e 
-        junte-se com seus amigos para competir de forma 
-        saudável e inovadora. Movimente-se com worke!
-      </label>
+      <h1>{{ introdutionTitle }}</h1>
+      <label>{{ introdutionText }}</label>
       <div class="intro-infos_store">
         <h2>Disponível em</h2>
         <div class="store-img">
@@ -16,12 +12,18 @@
       </div>
     </div>
     <div class="intro-img">
-      <img src="../../assets/img/mobileLanding1.png" />
+      <img src="../../assets/img/mobileLanding1phone.png" />
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "Introduction",
+  props: {
+    introdutionTitle: String,
+    introdutionText: String
+  }
+};
 </script>
 
 <style lang="less" scoped>
@@ -29,11 +31,17 @@ export default {};
 
 .intro {
   margin-top: @height-menu-desktop;
-  display: flex;
+  display: grid;
+  grid-template-areas: "text phone";
   align-items: center;
   height: 550px;
+  background-image: url("../../assets/img/backgroundBlue.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
 
   &-infos {
+    grid-area: text;
     padding-left: @margin-desktop;
     width: 570px;
 
@@ -54,6 +62,7 @@ export default {};
 
     &_store {
       border: 2px solid @blue;
+      background: @white;
       padding: 20px;
       border-radius: 25px;
       display: flex;
@@ -78,13 +87,11 @@ export default {};
     }
   }
   &-img {
-    position: absolute;
+    grid-area: phone;
     top: 50px;
-    z-index: 5;
-    right: 0;
 
     img {
-      height: 600px;
+      width: 55%;
     }
   }
 }
