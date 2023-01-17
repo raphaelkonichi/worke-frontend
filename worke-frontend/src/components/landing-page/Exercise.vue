@@ -1,11 +1,14 @@
 <template>
   <div class="exercise">
-    <div class="exercise-img">
-       <img src="../../assets/img/mobileLanding4.png" />
-    </div>
-    <div class="exercise-infos">
-      <h1>{{ exerciseTitle }}</h1>
-      <label>{{ exerciseText }}</label>
+    <div class="space"></div>
+    <div class="exercise-group">
+      <div class="exercise-img">
+        <img src="../../assets/img/mobileLanding4.png" />
+      </div>
+      <div class="exercise-infos">
+        <h1>{{ exerciseTitle }}</h1>
+        <label>{{ exerciseText }}</label>
+      </div>
     </div>
   </div>
 </template>
@@ -24,15 +27,25 @@ export default {
 @import "../../assets/variables.less";
 
 .exercise {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 70px;
-    grid-template-areas: "phone text";
-    align-items: center;
-    background-image: url("../../assets/img/backgroundPink.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    background-color: @white;
+
+    .space {
+      height: 50px;
+    }
+
+    &-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 70px;
+      grid-template-areas: "phone text";
+      align-items: center;
+      background-image: url("../../assets/img/backgroundPink.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
 
     &-infos {
         grid-area: text;

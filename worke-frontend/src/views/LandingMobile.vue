@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="landing">
     <Introduction :introdutionTitle="introdutionTitle" :introdutionText="introdutionText"/>
     <MoreAbout :moreAboutSectionTitle="moreAboutSectionTitle" :moreAboutTitle="moreAboutTitle" :moreAboutText="moreAboutText"/>
     <Competition :competitionTitle="competitionTitle" :competitionText="competitionText"/> 

@@ -25,6 +25,8 @@ export default {
 @import "../../assets/variables.less";
 
 .about {
+    background-color: white;
+
     h1 {
         font-weight: 900;
         font-size: 28px;
@@ -32,7 +34,7 @@ export default {
         text-transform: uppercase;
         color: @black;
         text-align: center;
-        margin: 90px 0;
+        padding: 90px 0;
     }
 
     &-group {
@@ -45,7 +47,7 @@ export default {
         background-repeat: no-repeat;
         background-position: left;
         background-size: contain;
-        margin-bottom: 100px;
+        padding-bottom: 50px;
 
         h2 {
             grid-area: title;

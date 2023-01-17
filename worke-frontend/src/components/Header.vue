@@ -5,7 +5,11 @@
 </template>
 
 <script>
-export default {};
+
+export default {
+  components: {
+  }
+};
 </script>
 
 <style lang="less" scoped>
@@ -14,7 +18,7 @@ export default {};
 .header {
   display: flex;
   align-items: center;
-  height: @height-menu-desktop;
+  height: @height-header-desktop;
   padding-right: @margin-desktop;
   padding-left: @margin-desktop;
   position: fixed;
@@ -25,6 +29,16 @@ export default {};
 
   img {
     height: 36px;
+  }
+
+  @media (max-width: 768px) {
+    height: @height-header-mobile;
+    padding-right: @margin-mobile;
+    padding-left: @margin-mobile;
+
+    img {
+      height: 28px;
+    }
   }
 }
 </style>

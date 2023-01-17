@@ -32,7 +32,7 @@ export default {
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-    margin-bottom: 100px;
+    background-color: @white;
 
     &-text {
         grid-area: text;

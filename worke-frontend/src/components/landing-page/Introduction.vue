@@ -30,7 +30,7 @@ export default {
 @import "../../assets/variables.less";
 
 .intro {
-  margin-top: @height-menu-desktop;
+  margin-top: @height-header-desktop;
   display: grid;
   grid-template-areas: "text phone";
   align-items: center;
@@ -39,6 +39,7 @@ export default {
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
+  background-color: @white;
 
   &-infos {
     grid-area: text;
@@ -91,7 +92,7 @@ export default {
     top: 50px;
 
     img {
-      width: 55%;
+      max-width: 40%;
     }
   }
 }

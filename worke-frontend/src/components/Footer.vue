@@ -22,6 +22,7 @@ export default {
   height: 265px;
   background-size: cover;
   position: relative;
+  background-color: @white;
 
   &-info {
     display: flex;

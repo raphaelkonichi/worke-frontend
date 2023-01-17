@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="login-card">
     <div class="container">
       <div class="logo">
         <img src="../assets/img/logo-empresas.png" alt="" />
@@ -34,6 +34,7 @@ export default {
   justify-content: center;
   height: 100vh;
   z-index: 2;
+  background-color: @white;
 
   .logo {
     margin-bottom: 35px;
