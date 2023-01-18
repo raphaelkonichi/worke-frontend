@@ -31,7 +31,7 @@ export default {
     background: @white;
     border-radius: 7px;
     padding: 25px;
-    // height: ~"calc(100vh - 288px)";
+    height: ~"calc(100vh - 288px)";
 }
 
 </style>

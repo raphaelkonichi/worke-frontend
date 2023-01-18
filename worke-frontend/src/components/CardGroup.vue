@@ -75,5 +75,35 @@ export default {
       }
     }
   }
+
+  @media (max-width: 1470px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .card {
+      margin-bottom: unset;
+    }
+  }
+
+  @media (max-width: 1360px) {
+    justify-content: start;
+
+    .card {
+      margin-right: 25px;
+    }
+  }
+
+  @media (max-width: 685px) {
+    flex-direction: column;
+
+    .card {
+      margin-right: unset;
+      margin-bottom: 25px;
+
+      &:last-child{
+        margin-bottom: unset;
+      }
+    }
+  }
 }
 </style>

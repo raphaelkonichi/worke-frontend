@@ -102,7 +102,7 @@ export default {};
 @import "../assets/variables.less";
 .color-card-list {
   margin-top: 20px;
-  // height: ~"calc(100vh - 405px)";
+  height: ~"calc(100vh - 405px)";
   overflow-y: scroll;
   .card {
     display: flex;

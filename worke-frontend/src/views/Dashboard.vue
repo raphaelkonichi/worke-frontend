@@ -81,8 +81,35 @@ export default {
     }
   }
 
+  @media (max-width: 1470px) {
+    &-group {
+      display: grid;
+      grid-template-columns: 3fr 2fr 2fr;
+      grid-template-rows: 1fr 3fr 3fr;
+      grid-gap: 25px;
+      grid-template-areas:
+        "cards ranking rankingTop"
+        "pie ranking rankingTop"
+        "bar ranking rankingTop";
+      height: ~"calc(100vh - 288px)";
+    }
+  }
+
+  @media (max-width: 1360px) {
+    &-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 2fr 3fr;
+      grid-gap: 25px;
+      grid-template-areas:
+        "cards cards"
+        "pie bar"
+        "ranking rankingTop";
+    }
+  }
+
   @media (max-width: 768px) {
-    padding: 0 @margin-mobile 30px;
+    padding: 0 @margin-mobile 40px;
 
     &-group {
       display: flex;
@@ -91,7 +118,7 @@ export default {
   }
 
   @media (max-width: 525px) {
-    padding: 0 @margin-mobile 30px;
+    padding: 0 @margin-mobile 40px;
 
     &-group {
       display: flex;
