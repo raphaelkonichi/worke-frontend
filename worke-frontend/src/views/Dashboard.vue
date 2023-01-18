@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import Title from "../components/Title.vue";
-import CardGroup from "../components/CardGroup.vue";
+import Title from "../components/DashboardTitle.vue";
+import CardGroup from "../components/InfoCards.vue";
 import TopCard from "../components/TopCard.vue";
 import RankingCard from "../components/RankingCard.vue";
-import CardCharts from "../components/CardCharts.vue";
+import CardCharts from "../components/PieCardCharts.vue";
 import BarCardCharts from "../components/BarCardCharts.vue";
 
 export default {

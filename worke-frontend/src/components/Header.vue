@@ -1,6 +1,10 @@
 <template>
   <div class="header">
     <img src="../assets/img/logoWorke.svg" />
+    <div class="dropdown-menu">
+      <p>empresa x</p>
+      <img src="../assets/img/angle-down.svg"/>
+    </div>
   </div>
 </template>
 
@@ -26,9 +30,29 @@ export default {
   background-color: @white;
   z-index: 4;
   top: 0;
+  justify-content: space-between;
 
   img {
     height: 36px;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      font-weight: 900;
+      font-size: 12px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+
+    img {
+      height: 12px;
+    }
   }
 
   @media (max-width: 768px) {

@@ -7,7 +7,7 @@
 
 <script>
 import CardTitle from "../components/CardTitle.vue"; 
-import ColorCardList from "../components/ColorCardList.vue"; 
+import ColorCardList from "../components/TopList.vue"; 
 
 export default {
   name: 'TopCard',

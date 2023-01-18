@@ -7,7 +7,7 @@
 
 <script>
 import CardTitle from "../components/CardTitle.vue";
-import CardList from "../components/CardList.vue";
+import CardList from "../components/RankingList.vue";
 
 export default {
   name: "TopCard",
