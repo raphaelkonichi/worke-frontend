@@ -1,17 +1,26 @@
 <template>
   <div class="header">
     <img src="../assets/img/logoWorke.svg" />
-    <div class="dropdown-menu">
+    <div class="dropdown-menu" v-if="this.appearMenu" @click="openMenu">
       <p>empresa x</p>
-      <img src="../assets/img/angle-down.svg"/>
+      <div :class="changeArrowIcon(isOpenMenu)"></div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  components: {
+  props: {
+    appearMenu: Boolean,
+    isOpenMenu: Boolean,
+  },
+  methods: {
+    openMenu() {
+      this.$emit("openMenu");
+    },
+    changeArrowIcon(value) {
+      return !value ? "arrow-start" : "arrow";
+    },
   }
 };
 </script>
@@ -40,6 +49,7 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
 
     p {
       font-weight: 900;
@@ -50,8 +60,23 @@ export default {
       margin-right: 10px;
     }
 
-    img {
-      height: 12px;
+    .arrow-start {
+      background-image: url("../assets/img/angle-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 24px;
+      width: 24px;
+      transition: all 0.25s;
+      transform: rotate(0);
+    }
+    .arrow {
+      background-image: url("../assets/img/angle-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 24px;
+      width: 24px;
+      transition: all 0.25s;
+      transform: rotate(180deg);
     }
   }
 
