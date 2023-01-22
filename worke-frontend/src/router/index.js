@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import LandingMobile from "../views/LandingMobile.vue";
 import Login from "../views/Login.vue";
 import Dashboard from "../views/Dashboard.vue";
+import Groups from "../views/Groups.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ const routes = [
     path: "/Dashboard",
     name: "Dashboard",
     component: Dashboard,
+  },
+  {
+    path: "/Groups",
+    name: "Groups",
+    component: Groups,
   },
 ];
 
