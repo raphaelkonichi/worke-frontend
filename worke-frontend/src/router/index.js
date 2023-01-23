@@ -4,6 +4,7 @@ import LandingMobile from "../views/LandingMobile.vue";
 import Login from "../views/Login.vue";
 import Dashboard from "../views/Dashboard.vue";
 import Groups from "../views/Groups.vue";
+import Employees from "../views/Employees.vue";
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
     path: "/Groups",
     name: "Groups",
     component: Groups,
+  },
+  {
+    path: "/Employees",
+    name: "Employees",
+    component: Employees,
   },
 ];
 
