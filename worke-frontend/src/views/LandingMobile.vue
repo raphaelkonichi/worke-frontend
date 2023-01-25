@@ -1,9 +1,10 @@
 <template>
   <div class="landing">
-    <Introduction :introdutionTitle="introdutionTitle" :introdutionText="introdutionText"/>
+    <Introduction :introdutionTitle="introdutionTitle" :introdutionText="introdutionText" :introAvailable="introAvailable"/>
     <MoreAbout :moreAboutSectionTitle="moreAboutSectionTitle" :moreAboutTitle="moreAboutTitle" :moreAboutText="moreAboutText"/>
     <Competition :competitionTitle="competitionTitle" :competitionText="competitionText"/> 
     <Exercise :exerciseTitle="exerciseTitle" :exerciseText="exerciseText"/>
+    <IsCompany/>
     <Footer />
   </div>
 </template>
@@ -13,6 +14,7 @@ import Introduction from "../components/landing-page/Introduction.vue";
 import MoreAbout from "../components/landing-page/MoreAbout.vue";
 import Competition from "../components/landing-page/Competition.vue";
 import Exercise from "../components/landing-page/Exercise.vue";
+import IsCompany from '../components/landing-page/IsCompany.vue';
 import Footer from '../components/Footer.vue';
 
 export default {
@@ -22,10 +24,12 @@ export default {
     MoreAbout,
     Competition,
     Exercise,
+    IsCompany,
     Footer,
   },
   data() {
     return {
+      introAvailable: 'Disponível em breve',
       introdutionTitle: 'o app para movimentar seu corpo',
       introdutionText: 'Exercite seu corpo, estabeleça uma rotina e junte-se com seus amigos para competir de forma saudável e inovadora. Movimente-se com worke!',
       moreAboutSectionTitle: 'saiba mais sobre o app',
@@ -39,3 +43,12 @@ export default {
   },
 };
 </script>
+
+<style lang="less" scoped>
+@import "../assets/variables.less";
+
+.landing {
+  background-color: @white;
+}
+
+</style>

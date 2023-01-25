@@ -4,7 +4,7 @@
     <div class="about-group">
         <h2>{{ moreAboutTitle }}</h2>
         <div class="about-group_img">
-            <img src="../../assets/img/mobileLanding2.png" />
+            <img src="../../assets/img/about-company.png" />
         </div>
         <label>{{ moreAboutText }}</label>
     </div>

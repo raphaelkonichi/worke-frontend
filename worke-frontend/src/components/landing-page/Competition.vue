@@ -1,7 +1,8 @@
 <template>
   <div class="competition">
+    <h1 class="only-mobile">{{ competitionTitle }}</h1>
     <div class="competition-text">
-        <h1>{{ competitionTitle }}</h1>
+        <h1 class="only-web">{{ competitionTitle }}</h1>
         <p>{{ competitionText }}</p>
     </div>
     <div class="competition-img">
@@ -32,7 +33,10 @@ export default {
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-    background-color: @white;
+
+    .only-mobile {
+      display: none;
+    }
 
     &-text {
         grid-area: text;
@@ -61,6 +65,61 @@ export default {
         img {
             width: 50%;
         }
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 40px;
+
+      &-img {
+        img {
+            width: unset;
+        }
+    }
+    }
+
+    @media (max-width: 660px) {
+      display: flex;
+      flex-direction: column;
+      grid-gap: unset;
+      margin-top: 50px;
+      background-image: url("../../assets/img/backgroundGreen.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: cover;
+
+      .only-mobile {
+        display: flex;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 28px;
+        color: @green;
+        letter-spacing: 0.1em;
+        text-align: center;
+      }
+
+      &-text {
+        order: 3;
+        padding: 0 40px;
+
+        h1 {
+          display: none;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+
+      &-img {
+        order: 2;
+
+        img {
+          width: unset;
+          height: 500px;
+          padding: 40px 0;
+        }
+      }
     }
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="footer-info">
       <img src="../assets/img/logoGradient.svg" class="logo"/>
-      <label>WORKE. 2022.</label>
+      <label>WORKE. O uso da gamificação e de redes neurais para sua saúde e bem-estar. 2023.</label>
     </div>
   </div>
 </template>
@@ -30,14 +30,22 @@ export default {
     padding-left: @margin-desktop;
     position: absolute;
     margin-top: 80px;
+    max-width: 600px;
 
     .logo {
       width: 50px;
       margin-bottom: 10px;
     }
   }
+
   img {
       width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    &-info {
+      padding: 0 @margin-mobile;
+    }
   }
 }
 

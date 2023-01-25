@@ -1,14 +1,15 @@
 <template>
   <div class="intro">
+    <h1 class="only-mobile">{{ introdutionTitle }}</h1>
     <div class="intro-infos">
-      <h1>{{ introdutionTitle }}</h1>
+      <h1 class="only-web">{{ introdutionTitle }}</h1>
       <label>{{ introdutionText }}</label>
       <div class="intro-infos_store">
-        <h2>Disponível em</h2>
-        <div class="store-img">
+        <h2>{{ introAvailable }}</h2>
+        <!-- <div class="store-img">
           <img src="../../assets/img/app-store.png" />
           <img src="../../assets/img/google-play.png" />
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="intro-img">
@@ -21,10 +22,12 @@ export default {
   name: "Introduction",
   props: {
     introdutionTitle: String,
-    introdutionText: String
+    introdutionText: String,
+    introAvailable: String,
   }
 };
 </script>
+
 
 <style lang="less" scoped>
 @import "../../assets/variables.less";
@@ -34,16 +37,18 @@ export default {
   display: grid;
   grid-template-areas: "text phone";
   align-items: center;
-  height: 550px;
+  padding: 0px @margin-desktop;
   background-image: url("../../assets/img/backgroundBlue.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-  background-color: @white;
+
+  .only-mobile {
+    display: none;
+  }
 
   &-infos {
     grid-area: text;
-    padding-left: @margin-desktop;
     width: 570px;
 
     h1 {
@@ -89,10 +94,80 @@ export default {
   }
   &-img {
     grid-area: phone;
-    top: 50px;
+    display: flex;
+    justify-content: center;
+  }
 
-    img {
-      max-width: 40%;
+  @media (max-width: 1024px) {
+    &-infos {
+      width: 470px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &-infos {
+      width: 300px;
+    }
+
+    &-img {
+      height: 90%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 5px;
+    padding: 0px @margin-mobile;
+
+    &-infos {
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    &-img {
+      height: 80%;
+      justify-content: end;
+    }
+  }
+
+  @media (max-width: 660px) {
+    margin-top: @height-header-mobile;
+    padding: 50px @margin-mobile;
+    background-image: url("../../assets/img/backgroundBlue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    .only-mobile {
+      order: 1;
+      display: flex;
+      font-size: 28px;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: @blue;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    &-infos {
+      order: 3;
+      width: 100%;
+
+      h1 {
+        display: none;
+      }
+    }
+
+    &-img {
+      order: 2;
+
+      img {
+        height: 500px;
+        margin-bottom: 40px;
+      }
     }
   }
 }
