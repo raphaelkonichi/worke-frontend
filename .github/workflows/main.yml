@@ -16,7 +16,7 @@ jobs:
               
       - name: Run script
         run:  |
-            npm install
+            npm i -g npm@8 && npm i -g npm@latest
             npm run build
             
       - name: S3 Sync
