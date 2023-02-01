@@ -3,13 +3,14 @@ version: 0.2
 phases:
   install:
     commands:
-      - npm i npm@latest -g && node -v && npm -v
+      - npm i npm@latest -g
+      - npm install -g n
       - pip install --upgrade pip
       - pip install --upgrade awscli
   pre_build:
     commands:
       - echo Pre_build Phase
-      - npm install -g npm@latest
+      - npm install
   build:
     commands:
       - echo Build Phase
