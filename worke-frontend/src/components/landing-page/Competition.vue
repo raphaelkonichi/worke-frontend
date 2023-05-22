@@ -1,12 +1,14 @@
 <template>
   <div class="competition">
+    <img class="only-mobile" src="../../assets/img/competição-title.svg"/>
     <h1 class="only-mobile">{{ competitionTitle }}</h1>
     <div class="competition-text">
+        <img class="only-web" src="../../assets/img/competição-title.svg"/>
         <h1 class="only-web">{{ competitionTitle }}</h1>
         <p>{{ competitionText }}</p>
     </div>
     <div class="competition-img">
-      <img src="../../assets/img/mobileLanding3.png" />
+      <img src="../../assets/img/ranking-new.png" />
     </div>
   </div>
 </template>
@@ -29,26 +31,34 @@ export default {
     grid-gap: 70px;
     grid-template-areas: "text phone";
     align-items: center;
-    background-image: url("../../assets/img/backgroundGreen.png");
+    background-image: url("../../assets/img/backgroundPink.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
+
+    img {
+      width: 60%;
+    }
 
     .only-mobile {
       display: none;
     }
 
     &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
         grid-area: text;
         padding-left: @margin-desktop;
 
         h1{
             text-transform: uppercase;
-            font-weight: 900;
+            font-weight: 500;
             font-size: 28px;
-            color: @green;
+            color: @pink;
             letter-spacing: 0.1em;
             text-align: end;
+            margin-top: -45px;
         }
 
         p {
@@ -56,6 +66,11 @@ export default {
             letter-spacing: 0.03em;
             color: @black;
             text-align: end;
+            width: 65%;
+        }
+
+        img {
+          width: 60%;
         }
     }
 
@@ -63,7 +78,7 @@ export default {
         grid-area: phone;
 
         img {
-            width: 50%;
+            width: 75%;
         }
     }
 
@@ -73,9 +88,17 @@ export default {
 
       &-img {
         img {
-            width: unset;
+            width: 65%;
         }
-    }
+      }
+      &-text {
+        h1 {
+          margin-top: unset;
+        }
+        img {
+          width: 95%;
+        }
+      } 
     }
 
     @media (max-width: 660px) {
@@ -83,17 +106,21 @@ export default {
       flex-direction: column;
       grid-gap: unset;
       margin-top: 50px;
-      background-image: url("../../assets/img/backgroundGreen.png");
+      background-image: url("../../assets/img/backgroundPink.png");
       background-repeat: no-repeat;
-      background-position: right;
+      background-position: center;
       background-size: cover;
+
+      .only-web {
+        display: none;
+      }
 
       .only-mobile {
         display: flex;
         text-transform: uppercase;
-        font-weight: 900;
+        font-weight: 500;
         font-size: 28px;
-        color: @green;
+        color: @pink;
         letter-spacing: 0.1em;
         text-align: center;
       }
@@ -101,13 +128,19 @@ export default {
       &-text {
         order: 3;
         padding: 0 40px;
+        align-items: center;
 
         h1 {
           display: none;
+          margin-top: unset;
         }
 
         p {
           text-align: center;
+        }
+
+        img {
+          width: 95%;
         }
       }
 

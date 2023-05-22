@@ -2,11 +2,11 @@
   <div class="intro">
     <div class="only-mobile">
       <h1>{{ introdutionTitle }}</h1>
-      <img src="../../assets/img/movimente-corpo.svg"/>
+      <img src="../../assets/img/movimente-empresa.svg"/>
     </div>
     <div class="intro-infos">
       <h1 class="only-web">{{ introdutionTitle }}</h1>
-      <img class="only-web" src="../../assets/img/movimente-corpo.svg"/>
+      <img class="only-web" src="../../assets/img/movimente-empresa.svg"/>
       <label>{{ introdutionText }}</label>
       <div class="intro-infos_store">
         <h2>{{ introAvailable }}</h2>

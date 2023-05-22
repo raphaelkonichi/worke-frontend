@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="footer-info">
       <img src="../assets/img/logoGradient.svg" class="logo"/>
-      <label>WORKE. O uso da gamificação e de redes neurais para sua saúde e bem-estar. 2023.</label>
+      <label>WORKE: um software que une gamificação e machine learning para saúde e bem-estar. 2023.</label>
     </div>
   </div>
 </template>

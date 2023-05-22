@@ -2,9 +2,12 @@
   <div class="about">
     <h1>{{ moreAboutSectionTitle }}</h1>
     <div class="about-group">
-        <h2>{{ moreAboutTitle }}</h2>
+        <div>
+            <h2>{{ moreAboutTitle }}</h2>
+            <img class="group-title" src="../../assets/img/grupo-title.svg"/>
+        </div>
         <div class="about-group_img">
-            <img src="../../assets/img/mobileLanding2.png" />
+            <img src="../../assets/img/mobile-group-new.png" />
         </div>
         <label>{{ moreAboutText }}</label>
     </div>
@@ -26,7 +29,7 @@ export default {
 
 .about {
     h1 {
-        font-weight: 900;
+        font-weight: 600;
         font-size: 28px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -52,9 +55,13 @@ export default {
             padding-left: @margin-desktop;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            font-weight: 900;
+            font-weight: 500;
             font-size: 28px;
             color: @purple;
+        }
+
+        .group-title{
+            padding-left: 70px;
         }
 
         &_img {

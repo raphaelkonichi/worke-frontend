@@ -4,7 +4,7 @@
         <img src="../../assets/img/dashboard-landing.png"/>
     </div>
     <div class="company-dash_info">
-        <h1>{{ companyTitle }}</h1>
+        <img src="../../assets/img/planos-title.svg"/>
         <label>{{ companyText }}</label>
     </div>
   </div>
@@ -22,10 +22,6 @@ export default {
 <style lang="less" scoped>
 @import "../../assets/variables.less";
 .company-dash{
-    background-image: url("../../assets/img/backgroundBlue.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "web text";
@@ -54,6 +50,10 @@ export default {
             font-weight: 900;
             font-size: 28px;
             color: @blue;
+        }
+
+        img { 
+            width: 100%;
         }
 
         label {
@@ -95,10 +95,6 @@ export default {
 
     @media (max-width: 660px) {
         margin-top: 50px;
-        background-image: url("../../assets/img/backgroundBlue.png");
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: cover;
         padding: 0px @margin-mobile;
 
         &_img {
